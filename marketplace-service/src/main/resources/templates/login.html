@@ -4,7 +4,7 @@
 <body>
 <div class="container">
 
-    <form action="#" th:action="@{/}" th:object="${login}" method="post" class="form-signin">
+    <form action="#" th:action="@{/login}" th:object="${login}" method="post" class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputUsername" class="sr-only">Username</label>
         <input type="text" th:field="*{username}" id="inputUsername" class="form-control" placeholder="Username" required="true" autofocus="true"/>

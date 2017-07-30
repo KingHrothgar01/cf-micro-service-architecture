@@ -13,7 +13,7 @@ marketplace:
       id: http://product-service:8081
       api:
         url: /v1/products/
-        
+
 security:
   ignored: /favicon.ico
   basic:
@@ -21,6 +21,7 @@ security:
   user:
     name: admin
     password: admin
+    role: USER
   oauth2:
     client:
       client-id: adminclient
@@ -30,8 +31,8 @@ security:
       access-token-uri: http://auth-server:9999/oauth/token
       user-authorization-uri: http://auth-server:9999/oauth/authorize
       grant_type: authorization_code
-    resource:
-      user-info-uri: http://auth-server:9999/me
+#    resource:
+#      user-info-uri: http://auth-server:9999/me
 ---
 spring:
   profiles: cloud

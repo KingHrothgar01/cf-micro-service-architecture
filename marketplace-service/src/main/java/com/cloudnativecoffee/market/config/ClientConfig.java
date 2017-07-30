@@ -18,18 +18,17 @@ import org.springframework.web.client.RestTemplate;
  * @author lshannon
  *
  */
-public class ServicesConfig {
+public class ClientConfig {
 
 	@Bean(name="oauthRestTemplate")
 	@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
-	OAuth2RestTemplate restTemplateOAuth(OAuth2ProtectedResourceDetails resource, OAuth2ClientContext context) {
+	public OAuth2RestTemplate restTemplateOAuth(OAuth2ProtectedResourceDetails resource, OAuth2ClientContext context) {
 		return new OAuth2RestTemplate(resource, context);
 	}
 	
 	@Bean(name="restTemplate")
-	RestTemplate restTemplate(RestTemplateBuilder builder) {
+	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder.basicAuthorization("admin", "admin").build();
 	}
-
 
 }

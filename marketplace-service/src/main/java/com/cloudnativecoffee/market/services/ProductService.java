@@ -3,8 +3,7 @@
  */
 package com.cloudnativecoffee.market.services;
 
-import java.util.List;
-
+import com.cloudnativecoffee.market.model.Product;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -15,9 +14,7 @@ import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.stereotype.Service;
 
-import com.cloudnativecoffee.market.model.Product;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import java.util.List;
 
 /**
  * @author lshannon
