@@ -6,7 +6,7 @@ server:
 marketplace:
   services:
     order:
-      id: http://localhost:8083
+      id: http://localhost:8084
       api:
         url: /v1/order/
     product:
