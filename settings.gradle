@@ -1,0 +1,6 @@
+rootProject.name = 'cf-micro-service-architecture'
+
+include 'auth-server'
+include 'marketplace-service'
+include 'order-service'
+include 'product-service'
