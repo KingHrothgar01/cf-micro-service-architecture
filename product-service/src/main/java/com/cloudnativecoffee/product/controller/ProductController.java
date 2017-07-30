@@ -30,7 +30,7 @@ public class ProductController {
 	private final ProductService productService;
 
 	@GetMapping("/products")
-	ResponseEntity<List<Product>> products() {
+	public ResponseEntity<List<Product>> products() {
 		List<Product> returnValue = this.productService.getAllProducts();
 		if (returnValue != null) {
 			LOG.info("All products returned");
@@ -40,7 +40,7 @@ public class ProductController {
 	}
 
 	@PostMapping("/products")
-	ResponseEntity<Product> createProducts(@RequestBody @Valid Product product) {
+	public ResponseEntity<Product> createProducts(@RequestBody @Valid Product product) {
 		try {
 			return ResponseEntity.ok(this.productService.createUpdateProduct(product));
 		} catch(RestClientException | DataIntegrityViolationException | ConstraintViolationException e) {
@@ -50,7 +50,7 @@ public class ProductController {
 	}
 
 	@DeleteMapping("/products/{productId}")
-	ResponseEntity<String> deleteProduct(@PathVariable Long productId) {
+	public ResponseEntity<String> deleteProduct(@PathVariable Long productId) {
 		if(this.productService.deleteProduct(productId))
 			return ResponseEntity.ok("Product deleted successfully");
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Product does not exist");
