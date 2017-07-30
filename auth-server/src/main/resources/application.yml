@@ -6,9 +6,3 @@ security:
     name: admin
     password: admin
     role: USER
-  oauth2:
-    client:
-      client-id: adminclient
-      client-secret: adminsecret
-      scope: read,write
-      auto-approve-scopes: '.*'
