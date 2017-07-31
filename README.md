@@ -6,6 +6,7 @@ In this course we will create a simple Cloud Native Architecture. In completing 
 1. Has completed PCF Developer training
 2. Java JDK 8 Installed
 3. STS or IntelliJ
+4. Have git installed
 
 ## Java 8 JDK Download
 

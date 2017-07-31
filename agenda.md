@@ -8,3 +8,4 @@
 6. Accelerator Pipeline - 45 minutes
 7. Lunch Break - 1 hours
 8. Hands on Spring Cloud Native Workshop - 4 hours
+9. Go home and drink beer
