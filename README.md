@@ -175,7 +175,7 @@ https://hub.docker.com/_/redis/
 
 #### Cloud
 
-PWS market place offers a Redis services
+PWS market place offers a Redis services for free
 
 
 
