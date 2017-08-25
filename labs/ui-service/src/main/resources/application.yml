@@ -1,0 +1,18 @@
+endpoints:
+  sensitive: false
+username: admin
+password: admin
+product:
+    service:
+        host: http://localhost:8080/
+---
+spring:
+  profiles: dev
+server:
+    port: 8089
+---
+spring:
+  profiles: cloud
+product:
+    service:
+        host: https://product-service-s5156275.cfapps.io/

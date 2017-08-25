@@ -1,0 +1,11 @@
+username: admin
+password: admin
+role: USER
+flyway:
+  enabled: true
+  baselineOnMigrate: true
+---
+spring:
+  profiles: dev
+server:
+    port: 8081

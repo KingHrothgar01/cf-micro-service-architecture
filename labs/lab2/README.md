@@ -278,6 +278,20 @@ CREATE TABLE product (
     name    varchar(40)
 );
 
+INSERT INTO product
+VALUES (1, 'DB Car'),
+(2, 'DB Live Dinosaur');
+
+```
+
+You can remove the CommandLineRunner from application class
+
+Add the following  in application.yml
+
+```shell
+flyway:
+  enabled: true
+  baselineOnMigrate: true
 ```
 
 Run the application again locally. Flyway working with the schema can now be seen.

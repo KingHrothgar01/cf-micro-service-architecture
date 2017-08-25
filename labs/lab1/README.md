@@ -80,6 +80,8 @@ public class Product {
 Optionally this can be converted to Lombok to dramatically reduce the lines of code in the object definition. Why would this matter?
 
 https://projectlombok.org/download.html
+also, add the following compile group
+`compileOnly "org.projectlombok:lombok:1.16.16"`
 
 ### Create the Rest Endpoint
 
@@ -119,7 +121,7 @@ Add the following to your application.properties.
 endpoints.sensitive=false
 
 ```
-
+Depending on how an endpoint is exposed, the sensitive property may be used as a security hint. For example, sensitive endpoints will require a username/password when they are accessed over HTTP. 
 Restart your application and try some of the end points:
 
 - http://localhost:8080/mappings
@@ -165,7 +167,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example"))
+                .apis(RequestHandlerSelectors.basePackage("com.example")) //please make sure the base package matches your project structure
                 .paths(PathSelectors.any())
                 .build();
     }
